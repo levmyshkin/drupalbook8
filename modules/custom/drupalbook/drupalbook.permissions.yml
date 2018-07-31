@@ -1,0 +1,4 @@
+access premium pages:
+  title: 'Access Premium pages'
+  description: 'A custom permission for your pages.'
+  restrict access: TRUE

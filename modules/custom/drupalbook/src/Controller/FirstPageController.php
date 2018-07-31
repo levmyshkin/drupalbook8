@@ -25,4 +25,17 @@ class FirstPageController {
     return $element;
   }
 
+  /**
+   * Returns a private page.
+   *
+   * @return array
+   *   A simple renderable array.
+   */
+  public function privateContent() {
+    $element = array(
+      '#markup' => 'Private content',
+    );
+    return $element;
+  }
+
 }

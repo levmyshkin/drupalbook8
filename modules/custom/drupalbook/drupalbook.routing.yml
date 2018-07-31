@@ -5,3 +5,10 @@ drupalbook.first_page:
     _title: 'Hello World!'
   requirements:
     _permission: 'access content'
+drupalbook.private_content:
+  path: '/private-page'
+  defaults:
+    _controller: '\Drupal\drupalbook\Controller\FirstPageController::privateContent'
+    _title: 'Private content'
+  requirements:
+    _permission: 'access premium pages'

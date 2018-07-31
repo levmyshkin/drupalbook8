@@ -1,0 +1,7 @@
+drupalbook.first_page:
+  path: '/first-page'
+  defaults:
+    _controller: '\Drupal\drupalbook\Controller\FirstPageController::content'
+    _title: 'Hello World!'
+  requirements:
+    _permission: 'access content'

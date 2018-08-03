@@ -12,3 +12,14 @@ drupalbook.private_content:
     _title: 'Private content'
   requirements:
     _permission: 'access premium pages'
+drupalbook.display_node:
+  path: '/display-node/{node}'
+  defaults:
+    _controller: '\Drupal\drupalbook\Controller\DisplayNode::content'
+    _title_callback: '\Drupal\drupalbook\Controller\DisplayNode::getTitle'
+  requirements:
+    _custom_access: '\Drupal\drupalbook\Controller\DisplayNode::access'
+  options:
+    parameters:
+      node:
+        type: entity:node

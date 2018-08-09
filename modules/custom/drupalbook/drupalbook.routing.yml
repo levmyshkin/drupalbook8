@@ -23,3 +23,10 @@ drupalbook.display_node:
     parameters:
       node:
         type: entity:node
+drupalbook.settings:
+  path: '/admin/structure/drupalbook/settings'
+  defaults:
+    _form: '\Drupal\drupalbook\Form\DrupalbookSettingsForm'
+    _title: 'DrupalBook Settings form'
+  requirements:
+    _permission: 'administer site configuration'

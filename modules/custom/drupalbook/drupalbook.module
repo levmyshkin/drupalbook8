@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * Implements hook_form_alter().
+ */
+function drupalbook_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'drupalbook_admin_settings') {
+    $form['drupalbook_api_key']['#attributes']['placeholder'] = 'API key';
+    $form['drupalbook_api_client_id']['#attributes']['placeholder'] = 'API client ID';
+
+    $form['#validate'][] = 'drupalbook_settings_validate';
+    $form['#submit'][] = 'drupalbook_settings_submit';
+  }
+}
+
+/**
+ * Custom validation callback.
+ */
+function drupalbook_settings_validate(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  if (strpos($form_state->getValue('drupalbook_api_key'), 'google') == FALSE) {
+    $form_state->setErrorByName('drupalbook_api_key', t('API Key must start from "google".'));
+  }
+}
+
+/**
+ * Custom submit callback.
+ */
+function drupalbook_settings_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  // drupal_set_message is deprecated
+  // drupal_set_message(t('An error occurred and processing did not complete.'));
+
+  \Drupal::messenger()->addStatus(
+    t('An error occurred and processing did not complete.')
+  );
+}

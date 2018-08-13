@@ -17,7 +17,7 @@ function drupalbook_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $for
  * Custom validation callback.
  */
 function drupalbook_settings_validate(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
-  if (strpos($form_state->getValue('drupalbook_api_key'), 'google') == FALSE) {
+  if (strpos($form_state->getValue('drupalbook_api_key'), 'google') === FALSE) {
     $form_state->setErrorByName('drupalbook_api_key', t('API Key must start from "google".'));
   }
 }
@@ -30,6 +30,6 @@ function drupalbook_settings_submit(&$form, \Drupal\Core\Form\FormStateInterface
   // drupal_set_message(t('An error occurred and processing did not complete.'));
 
   \Drupal::messenger()->addStatus(
-    t('Insert API key in your <head> tag:  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" type="text/javascript"></script>.')
+    t(htmlentities('Insert API key in your <head> tag:  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" type="text/javascript"></script>.'))
   );
 }

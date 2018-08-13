@@ -30,6 +30,6 @@ function drupalbook_settings_submit(&$form, \Drupal\Core\Form\FormStateInterface
   // drupal_set_message(t('An error occurred and processing did not complete.'));
 
   \Drupal::messenger()->addStatus(
-    t('An error occurred and processing did not complete.')
+    t('Insert API key in your <head> tag:  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" type="text/javascript"></script>.')
   );
 }

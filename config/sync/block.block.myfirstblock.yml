@@ -1,0 +1,21 @@
+uuid: edcbd826-90fd-40e7-9361-70bffad12d90
+langcode: en
+status: true
+dependencies:
+  module:
+    - drupalbook
+  theme:
+    - bartik
+id: myfirstblock
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: drupalbook_first_block_block
+settings:
+  id: drupalbook_first_block_block
+  label: 'My first block'
+  provider: drupalbook
+  label_display: visible
+  drupalbook_first_block_settings: 'Ivan Abramenko'
+visibility: {  }

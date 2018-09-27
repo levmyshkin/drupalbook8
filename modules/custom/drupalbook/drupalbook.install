@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * Add simple block with text and image.
+ */
+function drupalbook_update_8001(&$sandbox) {
+  $uuid = 'dc0876cf-a242-4f4c-af0e-8a27fbe9e142';
+  $block = \Drupal::entityManager()->loadEntityByUuid('block_content', $uuid);
+
+  if (empty($block)) {
+    $block = \Drupal\block_content\Entity\BlockContent::create([
+      // Block title.
+      'info' => 'Simple text block with image',
+      // Block bundle.
+      'type' => 'basic',
+      'uuid' => 'dc0876cf-a242-4f4c-af0e-8a27fbe9e142'
+    ]);
+    $block->save();
+  }
+}

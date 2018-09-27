@@ -1,0 +1,25 @@
+uuid: 8083f262-085b-47ad-ae6e-4d1949e0fd9e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:dc0876cf-a242-4f4c-af0e-8a27fbe9e142'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: simpletextblockwithimage
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:dc0876cf-a242-4f4c-af0e-8a27fbe9e142'
+settings:
+  id: 'block_content:dc0876cf-a242-4f4c-af0e-8a27fbe9e142'
+  label: 'Simple text block with image'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

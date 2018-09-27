@@ -15,6 +15,7 @@ function drupalbook_update_8001(&$sandbox) {
       'type' => 'basic',
       'uuid' => 'dc0876cf-a242-4f4c-af0e-8a27fbe9e142'
     ]);
+    $block->body->value = '<p>Hello, World!</p><p><img alt="asdf" data-entity-type="file" data-entity-uuid="5d94f04b-a434-48ee-af29-16b526656cff" src="/sites/default/files/inline-images/download.png" /></p>';
     $block->save();
   }
 }

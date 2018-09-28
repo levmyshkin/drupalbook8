@@ -1,0 +1,15 @@
+uuid: 24b12f32-f3ca-4a7d-bddd-c50dee877253
+langcode: en
+status: false
+dependencies: {  }
+id: live
+label: Live
+description: ''
+folder: config/live
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

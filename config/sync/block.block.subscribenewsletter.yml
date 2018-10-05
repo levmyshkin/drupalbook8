@@ -1,0 +1,20 @@
+uuid: 7b2b0316-ff09-4ab3-a9f6-18a68803e4c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - drupalbook
+  theme:
+    - bartik
+id: subscribenewsletter
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: drupalbook_subsribe_form_button
+settings:
+  id: drupalbook_subsribe_form_button
+  label: 'Subscribe Newsletter'
+  provider: drupalbook
+  label_display: visible
+visibility: {  }

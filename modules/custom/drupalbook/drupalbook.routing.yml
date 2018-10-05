@@ -34,6 +34,6 @@ drupalbook.multistep_form:
   path: '/multistep-form'
   defaults:
     _form: '\Drupal\drupalbook\Form\MultiStepForm'
-    _title: 'Who are you?'
+    _title: 'Subscribe to newsletter'
   requirements:
     _permission: 'access content'

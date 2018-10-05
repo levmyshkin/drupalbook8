@@ -7,7 +7,8 @@
         "composer/installers": "^1.0.24",
         "wikimedia/composer-merge-plugin": "^1.4",
         "drupal/console": "~1.0",
-        "drupal/config_split": "^1.4"
+        "drupal/config_split": "^1.4",
+        "drupal/config_ignore": "^2.1"
     },
     "replace": {
         "drupal/core": "^8.5"

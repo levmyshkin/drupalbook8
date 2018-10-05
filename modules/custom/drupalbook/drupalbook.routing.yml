@@ -30,3 +30,10 @@ drupalbook.settings:
     _title: 'DrupalBook Settings form'
   requirements:
     _permission: 'administer site configuration'
+drupalbook.multistep_form:
+  path: '/multistep-form'
+  defaults:
+    _form: '\Drupal\drupalbook\Form\MultiStepForm'
+    _title: 'Who are you?'
+  requirements:
+    _permission: 'access content'

@@ -64,7 +64,7 @@ class DrupalbookYoutubeVideoFormatter extends FormatterBase {
           '#theme' => 'drupalbook_youtube_video_formatter',
           '#width' => $width,
           '#height' => $height,
-          '#youtube_video_id' => $matches[0],
+          '#video_id' => $matches[0],
         );
       }
 

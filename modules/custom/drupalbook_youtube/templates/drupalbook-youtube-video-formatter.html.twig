@@ -6,6 +6,7 @@
  * Available variables:
  * - width: Youtube video width.
  * - height: Youtube video height.
+ * - video_id: Youtube video ID.
  *
  * @see template_preprocess()
  * @see template_drupalbook_youtube_video_formatter()
@@ -14,5 +15,5 @@
  */
 #}
 {% spaceless %}
-  <iframe width="{{ width }}" height="{{ height }}" src="https://www.youtube.com/embed/{{ youtube_video_id }}" frameborder="0" allowfullscreen></iframe>
+  <iframe width="{{ width }}" height="{{ height }}" src="https://www.youtube.com/embed/{{ video_id }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 {% endspaceless %}

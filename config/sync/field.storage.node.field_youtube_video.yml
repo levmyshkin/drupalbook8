@@ -1,0 +1,19 @@
+uuid: 60625512-0e83-4481-84d7-c566039dbec2
+langcode: en
+status: true
+dependencies:
+  module:
+    - drupalbook_youtube
+    - node
+id: node.field_youtube_video
+field_name: field_youtube_video
+entity_type: node
+type: drupalbook_youtube
+settings: {  }
+module: drupalbook_youtube
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

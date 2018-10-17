@@ -8,10 +8,12 @@ dependencies:
     - field.field.node.article.field_image
     - field.field.node.article.field_link
     - field.field.node.article.field_tags
+    - field.field.node.article.field_youtube_video
     - image.style.thumbnail
     - node.type.article
   module:
     - comment
+    - drupalbook_youtube
     - image
     - link
     - path
@@ -69,6 +71,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_youtube_video:
+    weight: 122
+    settings: {  }
+    third_party_settings: {  }
+    type: drupalbook_youtube
+    region: content
   path:
     type: path
     weight: 30

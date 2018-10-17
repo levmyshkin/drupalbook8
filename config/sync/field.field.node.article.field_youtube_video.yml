@@ -1,0 +1,21 @@
+uuid: 312c7f40-22dc-423d-b97e-37d586e2de58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_youtube_video
+    - node.type.article
+  module:
+    - drupalbook_youtube
+id: node.article.field_youtube_video
+field_name: field_youtube_video
+entity_type: node
+bundle: article
+label: 'Youtube video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: drupalbook_youtube

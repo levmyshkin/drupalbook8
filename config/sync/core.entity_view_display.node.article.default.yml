@@ -9,10 +9,12 @@ dependencies:
     - field.field.node.article.field_image
     - field.field.node.article.field_link
     - field.field.node.article.field_tags
+    - field.field.node.article.field_youtube_video
     - image.style.large
     - node.type.article
   module:
     - comment
+    - drupalbook_youtube
     - image
     - link
     - text
@@ -69,6 +71,13 @@ content:
     settings:
       link: true
     third_party_settings: {  }
+  field_youtube_video:
+    weight: 112
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: drupalbook_youtube_thumbnail
+    region: content
   links:
     weight: 100
     region: content

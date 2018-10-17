@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Default theme implementation of a simple Youtube video.
+ *
+ * Available variables:
+ * - width: Youtube video width.
+ * - height: Youtube video height.
+ *
+ * @see template_preprocess()
+ * @see template_drupalbook_youtube_video_formatter()
+ *
+ * @ingroup themeable
+ */
+#}
+{% spaceless %}
+  <iframe width="{{ width }}" height="{{ height }}" src="https://www.youtube.com/embed/{{ youtube_video_id }}" frameborder="0" allowfullscreen></iframe>
+{% endspaceless %}

@@ -17,6 +17,7 @@ module:
   datetime: 0
   dblog: 0
   drupalbook: 0
+  drupalbook_product: 0
   drupalbook_youtube: 0
   dynamic_page_cache: 0
   editor: 0

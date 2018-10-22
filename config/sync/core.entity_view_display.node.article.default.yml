@@ -74,9 +74,11 @@ content:
   field_youtube_video:
     weight: 112
     label: above
-    settings: {  }
+    settings:
+      width: '600'
+      height: '400'
     third_party_settings: {  }
-    type: drupalbook_youtube_thumbnail
+    type: drupalbook_youtube_video
     region: content
   links:
     weight: 100

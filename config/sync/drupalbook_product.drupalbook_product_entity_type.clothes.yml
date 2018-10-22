@@ -1,0 +1,6 @@
+uuid: 5e8639e9-417c-41b9-b803-b6b5ee8bf988
+langcode: en
+status: true
+dependencies: {  }
+id: clothes
+label: Clothes

@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Contains drupalbook_product.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function drupalbook_product_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the drupalbook_product module.
+    case 'help.page.drupalbook_product':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function drupalbook_product_theme() {
+  $theme = [];
+  $theme['drupalbook_product_entity'] = [
+    'render element' => 'elements',
+    'file' => 'drupalbook_product_entity.page.inc',
+    'template' => 'drupalbook_product_entity',
+  ];
+  $theme['drupalbook_product_entity_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'drupalbook_product_entity.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+* Implements hook_theme_suggestions_HOOK().
+*/
+function drupalbook_product_theme_suggestions_drupalbook_product_entity(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#drupalbook_product_entity'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'drupalbook_product_entity__' . $sanitized_view_mode;
+  $suggestions[] = 'drupalbook_product_entity__' . $entity->bundle();
+  $suggestions[] = 'drupalbook_product_entity__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'drupalbook_product_entity__' . $entity->id();
+  $suggestions[] = 'drupalbook_product_entity__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}

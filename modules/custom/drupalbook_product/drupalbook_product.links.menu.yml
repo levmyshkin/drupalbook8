@@ -1,0 +1,18 @@
+
+# Product menu items definition
+entity.drupalbook_product_entity.collection:
+  title: 'Product list'
+  route_name: entity.drupalbook_product_entity.collection
+  description: 'List Product entities'
+  parent: system.admin_structure
+  weight: 100
+
+
+# Product type menu items definition
+entity.drupalbook_product_entity_type.collection:
+  title: 'Product type'
+  route_name: entity.drupalbook_product_entity_type.collection
+  description: 'List Product type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+

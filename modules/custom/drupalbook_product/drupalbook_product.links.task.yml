@@ -1,0 +1,18 @@
+# Product routing definition
+
+entity.drupalbook_product_entity.canonical:
+  route_name: entity.drupalbook_product_entity.canonical
+  base_route: entity.drupalbook_product_entity.canonical
+  title: 'View'
+
+entity.drupalbook_product_entity.edit_form:
+  route_name: entity.drupalbook_product_entity.edit_form
+  base_route: entity.drupalbook_product_entity.canonical
+  title: 'Edit'
+
+entity.drupalbook_product_entity.delete_form:
+  route_name:  entity.drupalbook_product_entity.delete_form
+  base_route:  entity.drupalbook_product_entity.canonical
+  title: Delete
+  weight: 10
+

@@ -1,0 +1,11 @@
+entity.drupalbook_product_entity.add_form:
+  route_name: entity.drupalbook_product_entity.add_page
+  title: 'Add Product'
+  appears_on:
+    - entity.drupalbook_product_entity.collection
+entity.drupalbook_product_entity_type.add_form:
+  route_name: entity.drupalbook_product_entity_type.add_form
+  title: 'Add Product type'
+  appears_on:
+    - entity.drupalbook_product_entity_type.collection
+

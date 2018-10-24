@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\Core\Access\AccessResult;
+
 /**
  * Implements hook_entity_presave().
  */
@@ -28,5 +30,14 @@ function drupalbook_examples_entity_insert(Drupal\Core\Entity\EntityInterface $e
 function drupalbook_examples_entity_update(Drupal\Core\Entity\EntityInterface $entity) {
   if ($entity->getEntityTypeId() == 'node' && $entity->getType() == 'page') {
     \Drupal::messenger()->addMessage('Page has been changed: ' . $entity->title->value);
+  }
+}
+
+/**
+ * Implements hook_entity_access().
+ */
+function drupalbook_examples_entity_access(\Drupal\Core\Entity\EntityInterface $entity, $operation, \Drupal\Core\Session\AccountInterface $account) {
+  if ($entity->getEntityTypeId() == 'node' && $entity->getType() == 'article' && $operation == 'view' && in_array('administrator', $account->getRoles())) {
+    AccessResult::forbidden();
   }
 }

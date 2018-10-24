@@ -1,0 +1,5 @@
+name: DrupalBook Examples
+description: Examples of hooks, plugins, services
+core: 8.x
+type: module
+package: DrupalBook

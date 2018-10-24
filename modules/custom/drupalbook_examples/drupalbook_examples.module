@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * Implements hook_entity_presave().
+ */
+function drupalbook_examples_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+  if ($entity->getEntityTypeId() == 'node' && $entity->getType() == 'article') {
+    $entity->title->value = $entity->title->value . 'by ' . date('d-m-Y');
+  }
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function drupalbook_examples_entity_insert(Drupal\Core\Entity\EntityInterface $entity) {
+  if ($entity->getEntityTypeId() == 'node' && $entity->getType() == 'page') {
+    $node = Node::create([
+      'type'        => 'article',
+      'title'       => 'New page created: ' . $entity->title->value,
+    ]);
+    $node->save();
+  }
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+function drupalbook_examples_entity_update(Drupal\Core\Entity\EntityInterface $entity) {
+  if ($entity->getEntityTypeId() == 'node' && $entity->getType() == 'page') {
+    \Drupal::messenger()->addMessage('Page has been changed: ' . $entity->title->value);
+  }
+}

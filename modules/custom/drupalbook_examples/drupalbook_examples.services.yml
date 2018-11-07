@@ -1,0 +1,5 @@
+services:
+  drupalbook_examples.event_subscriber:
+    class: Drupal\drupalbook_examples\EventSubscriber\DrupalbookExamplesSubscriber
+    tags:
+    - {name: event_subscriber}
